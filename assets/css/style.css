@@ -4,10 +4,10 @@
     Version: 1.0
 
 -----------------------------------------------------------------------------------
-    
+
     CSS INDEX
     ===================
-	
+
     01. Template default CSS
     02. Template Spacing CSS
     03. Elements CSS
@@ -23431,13 +23431,14 @@ svg:not(:root) {
 .header-logo {
   position: relative;
   z-index: 99;
-  margin-bottom: -30px;
-  background-color: #FFF;
+  /* margin-bottom: -30px; */
+  /* background-color: #FFF; */
+  /* height: 227px; */
+  /* padding: 30px; */
+  margin: 0 auto;
   width: 227px;
-  height: 227px;
   line-height: 227px;
   border-radius: 50%;
-  padding: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23454,17 +23455,17 @@ svg:not(:root) {
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-logo {
-    width: 130px;
+    /* width: 130px;
     height: 130px;
+    padding: 15px; */
     line-height: 130px;
-    padding: 15px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-logo {
-    width: 130px;
-    height: 130px;
+    /* width: 130px;
+    height: 130px; */
     line-height: 130px;
     padding: 15px;
     margin-bottom: 0;
@@ -23473,8 +23474,8 @@ svg:not(:root) {
 
 @media only screen and (max-width: 767px) {
   .header-logo {
-    width: 100px;
-    height: 100px;
+    /* width: 100px; */
+    /* height: 100px; */
     line-height: 100px;
     padding: 15px;
     margin-bottom: 0;
