@@ -294,59 +294,65 @@
     });
   });
 
-  /*-------------------------
-        Ajax Subscribe Form
-    ---------------------------*/
-  $(function () {
-    // Get the form.
-    var form = $("#subscribe");
+  // /*-------------------------
+  //       Ajax Subscribe Form
+  //   ---------------------------*/
+  // $(function () {
+  //   // Get the form.
+  //   var form = $("#subscribe");
 
-    // Get the messages div.
-    var formMessages = $(".form-messege");
+  //   // Get the messages div.
+  //   var formMessages = $(".form-messege");
 
-    // Set up an event listener for the contact form.
-    $(form).submit(function (e) {
-      // Stop the browser from submitting the form.
-      e.preventDefault();
+  //   // Set up an event listener for the contact form.
+  //   $(form).submit(function (e) {
+  //     // Stop the browser from submitting the form.
+  //     e.preventDefault();
 
-      // Serialize the form data.
-      var formData = $(form).serialize();
+  //     // Serialize the form data.
+  //     var formData = $(form).serialize();
 
-      // Submit the form using AJAX.
-      $.ajax({
-        type: "POST",
-        url: $(form).attr("action"),
-        data: formData,
-      })
-        .done(function (response) {
-          console.log(response);
-          // Make sure that the formMessages div has the 'success' class.
-          $(formMessages).removeClass("error");
-          $(formMessages).addClass("success");
+  //     // Submit the form using AJAX.
+  //     // fetch($(form).attr("action"), {
+  //     //   redirect: "follow",
+  //     //   method: "POST",
+  //     //   body: formData,
+  //     //   headers: {
+  //     //     "Content-Type": "text/plain;charset=utf-8",
+  //     //   },
+  //     // })
+  //     // .then((response) => {
+  //     //   let json = response.json();
+  //     //   console.log(json);
+  //     //   if (response.status >= 200 && response.status < 300) {
+  //     //     successCallback(json);
+  //     //     return json;
+  //     //   } else {
+  //     //     return json.then((error) => {
+  //     //       throw error;
+  //     //     });
+  //     //   }
+  //     // })
+  //     // .catch((error) => {
+  //     //   errorCallback(error);
+  //     //   return;
+  //     // });
 
-          // Set the message text.
-          $(formMessages).text(response);
 
-          // Clear the form.
-          $("#contact-form input,#contact-form textarea").val("");
-        })
-        .fail(function (data) {
-          // Make sure that the formMessages div has the 'error' class.
-          $(formMessages).removeClass("success");
-          $(formMessages).addClass("error");
+  //   $.post(
+  //     $(form).attr("action"),
+  //     {
+  //       email: "email",
+  //     },
+  //     function (data) {
+  //       console.log(data);
+  //       console.log("success");
+  //     },
+  //     "json"
+  //   );
 
-          // Set the message text.
-          if (data.responseText !== "") {
-            $(formMessages).text(data.responseText);
-          } else {
-            $(formMessages).text(
-              "Oops! An error occured and your message could not be sent."
-            );
-          }
-        });
-    });
-  });
-
+  //   });
+  // });
   /*--
         On Load Function
     -----------------------------------*/
@@ -359,6 +365,3 @@
     -----------------------------------*/
   $window.resize(function () {});
 })(jQuery);
-
-
-
