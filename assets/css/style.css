@@ -23501,7 +23501,7 @@ svg:not(:root) {
 
 @media only screen and (max-width: 479px) {
   .header-logo a {
-    max-width: 120px;
+    /* max-width: 120px; */
   }
 }
 
@@ -28211,7 +28211,7 @@ textarea:focus {
 
 @media only screen and (max-width: 575px) {
   .footer-logo {
-    width: 150px;
+    width: 200px;
     height: 150px;
     margin: auto;
   }
