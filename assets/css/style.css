@@ -23029,7 +23029,7 @@ svg:not(:root) {
   bottom: 60px;
 }
 
-.scroll-top img {
+.scroll-top img, .scroll-top svg {
   position: absolute;
   top: 50%;
   left: 50%;
